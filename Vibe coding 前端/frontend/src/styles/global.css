@@ -1,0 +1,108 @@
+:root {
+  --font-sans: 'IBM Plex Sans', 'Source Han Sans SC', 'PingFang SC', 'Microsoft YaHei', system-ui,
+    sans-serif;
+  --font-serif: 'JetBrains Mono', 'Noto Serif SC', ui-monospace, serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+
+  --geek-bg: #020617;
+  --geek-bg2: #0a0f1e;
+  --geek-surface: #0f172a;
+  --geek-surface2: #111c2e;
+  --geek-border: rgba(34, 211, 238, 0.18);
+  --geek-glow: rgba(34, 211, 238, 0.45);
+
+  --space-dark-bg: #020617;
+  --space-card: #0f172a;
+  --accent-cyan: #22d3ee;
+  --accent-mint: #22c55e;
+  --accent-gold: #eab308;
+
+  --paper-bg: #020617;
+  --paper-card: #111827;
+  --paper-cream: #050816;
+  --forest: #22c55e;
+  --forest-dark: #86efac;
+  --highlight-green: #4ade80;
+  --body: #cbd5e1;
+  --muted: #64748b;
+}
+
+/* 浅色讲义页（Language / Terminal / FrontendBackend 等根节点为 .page 且非首页） */
+.page:not(.geek-home) {
+  --paper-bg: #e8e4dc;
+  --paper-card: #faf8f3;
+  --paper-cream: #f2efe8;
+  --body: #1e293b;
+  --muted: #475569;
+  --forest-dark: #14532d;
+  --highlight-green: #166534;
+  color: var(--body);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--body);
+  background-color: var(--geek-bg);
+  background-image:
+    linear-gradient(rgba(34, 211, 238, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.04) 1px, transparent 1px),
+    radial-gradient(ellipse 100% 80% at 50% -30%, rgba(34, 211, 238, 0.12), transparent 55%);
+  background-size:
+    40px 40px,
+    40px 40px,
+    100% 100%;
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a[href]:hover,
+button:hover {
+  cursor: pointer;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.28);
+  color: #f8fafc;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
