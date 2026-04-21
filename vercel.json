@@ -1,0 +1,7 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "npm install --prefix \"Vibe coding 前端/frontend\"",
+  "buildCommand": "npm run build --prefix \"Vibe coding 前端/frontend\"",
+  "outputDirectory": "Vibe coding 前端/frontend/dist",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
