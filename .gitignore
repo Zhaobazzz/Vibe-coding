@@ -1,0 +1,2 @@
+# Vercel / local: build output copied to repo root for deployment
+/dist/
